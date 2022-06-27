@@ -23,13 +23,13 @@ const tarefas = [
 const findAllTarefasService = () => tarefas;
 
 const findByIdTarefaService = (id) => {
-   const tarefaById = tarefas.find((tarefa) =>{
-   if (tarefa.id === id) {
-    return tarefa;
-   }
-   });
-   console.log (tarefaById);
-   return tarefaById[0];
+  const tarefaById = tarefas.find((tarefa) => {
+    if (tarefa.id === id) {
+      return tarefa;
+    }
+  });
+  console.log(tarefaById);
+  return tarefaById[0];
 };
 
 const createTarefa = (tarefa) => {
@@ -38,23 +38,21 @@ const createTarefa = (tarefa) => {
 };
 
 const updateTarefa = (id, updateTarefa) => {
-  tarefas.forEach((tarefa) =>{
+  tarefas.forEach((tarefa) => {
     if (tarefa.id === id) {
-      tarefa=updateTarefa;
+      tarefa = updateTarefa;
     }
   });
   return tarefas;
 };
 
 const deleteTarefa = (id) => {
-  tarefas.forEach(
-    (tarefa, index) => {
-      if (tarefa.id === id) {
-        tarefas.splice(index, 1);
-      }
-    });
+  tarefas.forEach((tarefa, index) => {
+    if (tarefa.id === id) {
+      tarefas.splice(index, 1);
+    }
+  });
 };
-
 
 module.exports = {
   findAllTarefasService,
