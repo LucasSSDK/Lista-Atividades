@@ -32,18 +32,21 @@ const findByIdTarefaService = (id) => {
   return tarefaById[0];
 };
 
-const createTarefa = (tarefa) => {
+const createTarefa = (tarefa) => { const newId = tarefas.length + 1;
+  tarefa.id = newId;
   tarefas.push(tarefa);
-  return tarefas;
+  return tarefa;
 };
 
-const updateTarefa = (id, updateTarefa) => {
+const updateTarefasService = (id, updateTarefa) => {
+  updateTarefa['id'] = id;
+  tarefas.findIndex((tarefa) => tarefa.id == id);
   tarefas.forEach((tarefa) => {
     if (tarefa.id === id) {
       tarefa = updateTarefa;
     }
   });
-  return tarefas;
+  return updateTarefa;
 };
 
 const deleteTarefa = (id) => {
@@ -59,5 +62,5 @@ module.exports = {
   findByIdTarefaService,
   createTarefa,
   deleteTarefa,
-  updateTarefa,
+  updateTarefasService,
 };

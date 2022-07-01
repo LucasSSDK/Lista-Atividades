@@ -2,6 +2,9 @@ const tarefasService = require('../services/tarefa.service');
 
 const findAllTarefasController = (req, res) => {
   const tarefa = tarefasService.findAllTarefasService();
+  if (tarefa.length == 0) {
+    return res.status(404).send({message: 'não existe essa tarefa cadastrada'})
+  }
   res.send(tarefa);
 };
 
@@ -25,7 +28,8 @@ const updateTarefa =
 (req, res) => {
   const id = parseInt(req.params.id);
   const updatedTarefa = req.body;
-  res.send(tarefasService.updateTarefa(id, updatedTarefa));
+  const upTarefa = (tarefasService.updateTarefasService(id, updatedTarefa)); 
+  res.send (upTarefa);
 };
 
 const deleteTarefa = (req, res) => {
