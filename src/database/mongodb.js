@@ -1,4 +1,4 @@
-const mongoose = require('mogoose');
+const mongoose = require('mongoose');
 const uri = 'mongodb://localhost:27017/tarefas-db'
 
 function connectToDatabase() {
@@ -17,6 +17,4 @@ function connectToDatabase() {
   });
 };
 
-module.exports = {
-  connectToDatabase,
-};
+module.exports = connectToDatabase ;

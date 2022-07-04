@@ -1,0 +1,21 @@
+
+[
+   {
+     
+     "tarefa": "exercicios",
+     "descricao": "somente braços",
+     "tempo": "30min"
+   },
+   {
+    
+     "tarefa": "Lavar a louça",
+     "descricao": "Lavar, secar e guardar",
+     "tempo": "30min"
+   },
+   {
+     
+     "tarefa": "limpar o chão",
+     "descricao": "passar pano umido",
+     "tempo": "30min"
+   }
+]
